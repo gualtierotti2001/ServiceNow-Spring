@@ -23,7 +23,7 @@ public class TicketController {
 	@Autowired
 	ticketService TS;
 
-	@GetMapping(value = "helloworld")
+	@GetMapping(value = "hello world")
 	public String helloWorld(String hello) {	
 		return hello;		
 	}
