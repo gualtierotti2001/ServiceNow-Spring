@@ -1,0 +1,19 @@
+server: 
+  port: 8081
+  servlet: 
+    context-path: /resource-server
+
+spring:
+  jpa:
+    defer-datasource-initialization: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jws-algorithms: RS512
+          issuer-uri: http://localhost:8080/realms/UserData
+          jwk-set-uri: http://localhost:8080/realms/UserData/protocol/openid-connect/certs
+  datasource:
+    password: 'password'
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: 'postgres'
